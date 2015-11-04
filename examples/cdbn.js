@@ -50,3 +50,9 @@ a = [[0.5, 0.5, 0., 0., 0., 0.],
     [0.1,0.2,0.4,0.4,0.3,0.6]];
 
 console.log(cdbn.predict(a))
+var s = JSON.stringify(cdbn);
+var p = JSON.parse(s);
+//console.log(s);
+var cs = new dnn.CDBN(p);
+var s2 = JSON.stringify(cs);
+console.log(cs.predict(a));
